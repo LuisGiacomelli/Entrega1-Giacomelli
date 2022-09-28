@@ -15,4 +15,29 @@ Reservas en Argentina
 
 Esta es una pagina de Reservas Naturales
 
+<form action="/resultadoreserva/" method="GET">
+
+
+    <input type="text" name="reserva" id="reserva">
+
+    <input type="submit" value="Buscar">
+
+
+
+</form>
+
+    
+
+<p>Estamos buscando la reserva = {{nombre}}</p>    
+
+{% for cant_especies in cant_especies %}
+
+
+    <p>Reserva: {{cant_especies.nombre}} ---- Especies: {{cant_especies.cant_especies}} ----- Ubicacion: {{cant_especies.ubicacion}}</p> 
+
+
+
+{% endfor %}
+
+
 {% endblock %}

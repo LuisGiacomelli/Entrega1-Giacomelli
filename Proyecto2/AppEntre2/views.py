@@ -98,17 +98,17 @@ def cuidadorform(request):
 
 def busquedaReserva(request):
 
-    return render(request, "AppEntre2/busquedaReserva.html")
+    return render(request, "AppEntre2/inicio.html")
 
 def resultadoReservas(request):
 
-    if request.GET["nombre"]:
+    if request.GET["reserva"]:
 
-        nombre = request.GET["nombre"]
-        cant_especies = Reserva.objects.filter(nombre_icontains=nombre)
-        ubicacion = Reserva.objects.filter(nombre_icontains=nombre)
+        reserva = request.GET["reserva"]
+        cant_especies = Reserva.objects.filter(nombre__icontains=reserva)
+        ubicacion = Reserva.objects.filter(nombre__icontains=reserva)
 
-        return render(request, "AppEntre2/resultadosreserva.html", {"nombre":nombre, "cant_especie":cant_especies, "ubicacion":ubicacion})
+        return render(request, "AppEntre2/inicio.html", {"nombre":reserva, "cant_especies":cant_especies, "ubicacion":ubicacion})
     else:
         respuesta = "No enviaste datos"
 

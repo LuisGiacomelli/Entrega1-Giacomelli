@@ -9,7 +9,16 @@
 <body>
     
 
-    <p>Estamos buscando la reserva: {{nombre}} </p>
+    <p>Estamos buscando la reserva = {{nombre}}</p>    
+
+    {% for cant_especies in cant_especies %}
+
+
+        <p>Reserva: {{cant_especies.nombre}} ---- Especies: {{cant_especies.cant_especies}} ----- Ubicacion: {{cant_especies.ubicacion}}</p> 
+
+
+
+    {% endfor %}
 
 
 
