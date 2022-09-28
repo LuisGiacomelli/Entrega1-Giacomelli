@@ -13,7 +13,7 @@ Reservas en Argentina
 
 {% block descripcion %}
 
-Esta es una pagina de Reservas Naturales
+<p style="color: aqua;">Esta es una pagina de Reservas Naturales</p>
 
 <form action="/resultadoreserva/" method="GET">
 
@@ -28,12 +28,12 @@ Esta es una pagina de Reservas Naturales
 
     
 
-<p>Estamos buscando la reserva = {{nombre}}</p>    
+<p style="color:greenyellow ;">Estamos buscando la reserva = {{nombre}}</p>    
 
 {% for cant_especies in cant_especies %}
 
 
-    <p>Reserva: {{cant_especies.nombre}} ---- Especies: {{cant_especies.cant_especies}} ----- Ubicacion: {{cant_especies.ubicacion}}</p> 
+    <p style="color:yellow ;">Reserva: {{cant_especies.nombre}} ---- Especies: {{cant_especies.cant_especies}} ----- Ubicacion: {{cant_especies.ubicacion}}</p> 
 
 
 
